@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 
 from epsilon import Agent
 from foramt_df import format_df
+from utils import print_metrics
 
 df = pd.read_csv('data/trade1.csv')
 
@@ -38,7 +39,10 @@ for episode in range(num_episode):
         state = next_state
         episode_reward += reward
     total_reward.append(episode_reward)
-    print(f'====================={episode+1}=====================')
+    print(f'==========================={episode+1}===========================')
+
+
+print_metrics(total_reward=total_reward)
 
 plt.plot([i for i in range(len(total_reward))], total_reward)    
 plt.show()
