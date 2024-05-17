@@ -20,7 +20,7 @@ positions = [-1, 0, 1]
 
 env = gym.make("TradingEnv",
         name= "BTCUSD",
-        df = get_df('1h-data/binance-BTCUSDT-1h.pkl'),
+        df = get_df('data/binance-BTCUSDT-1h.pkl'),
         positions = positions,
         initial_position = 'random',
         max_episode_duration = 24*730,
