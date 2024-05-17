@@ -1,0 +1,6 @@
+__pycache__/
+poetry.lock
+data/
+diagrams/
+models/
+logs/
